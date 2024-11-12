@@ -24,4 +24,5 @@ export class Shareactions {
         cy.find("#password").type(this.elemnts.password);
         cy.get("#submitBtn").click();
     }
+
 }

@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('customFindElement', (element, waitTime = 0) => {
+    cy.wait(waitTime);   
+    return cy.get(element);
+});
