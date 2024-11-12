@@ -1,6 +1,6 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import { Shareactions } from "./shareaction";
+import { Shareactions } from "../actions/shareaction";
 
 const act = new Shareactions();
 

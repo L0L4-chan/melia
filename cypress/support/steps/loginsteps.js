@@ -1,4 +1,7 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Shareactions } from "../actions/shareaction";
+
+const act = new Shareactions();
 
 Given("I access the site correctly and I have a valid login", () => {
     act.start_web()

@@ -9,7 +9,4 @@ module.exports = defineConfig({
       return config
     },
   },
-
-video: true,
-videosFolder: "results/videos"
 });
