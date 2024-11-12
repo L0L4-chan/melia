@@ -10,7 +10,7 @@ The test will cover the booking process.
 
 ## Installation 
 The proyect has been run on Ubuntu:
-''' bash commands 
+``` bash commands 
 npm init -y
 npm install cypress --save-dev
 npm install --save-dev cypress-cucumber-preprocessor
@@ -18,7 +18,7 @@ npm install --save-dev @cucumber/cucumber
 npm i -D @types/cucumber @types/chai
 npm install cypress-recaptcha --save-dev
 npx cypress open
-'''
+```
 ## Objective
 Motivation : User wants to book a hotel 
 Acceptance Criteria : 
