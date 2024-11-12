@@ -1,5 +1,6 @@
 Feature: Log in on the website
 
+Background:  The user is logged in
 Scenario: Correct login
     Given: I access the site correctly and I have a login
     When: I introduce my login and password
