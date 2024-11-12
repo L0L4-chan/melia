@@ -26,6 +26,7 @@ export class Shareactions {
     }
 
     rightSearch(){
+        cy.get("#__next > div > div > div.search___2t_BT").find("#__next > div > div > div.search___2t_BT > div > div > div.tabs___28rrG > ul > li:nth-child(1) > a").click();
         cy.find("#suggest-input").type("Paris");
         cy.get("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.destination___YiVIM > div > div.content___NTabH > div > div > div > div > div > div > div > div > div > div:nth-child(1) > button").click(); 
         cy.get("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.calendar___3o0XN > div > div.wrapper___1qplQ > button > div")
