@@ -1,14 +1,13 @@
 export class Shareactions {
 
     elemnts = {
-        url : "https://www.melia.com/es",
         user: "maria111999@gmail.com",
         password: "Merlintesting1",
 
     };
 
     start_web(){
-        cy.visit(this.elemnts.url);
+        cy.visit("/");
     }
 
 

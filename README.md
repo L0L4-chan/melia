@@ -20,8 +20,8 @@ npm install cypress-recaptcha --save-dev
 npx cypress open
 ```
 ## Objective
-Motivation : User wants to book a hotel 
-Acceptance Criteria : 
+- Motivation : User wants to book a hotel 
+- Acceptance Criteria : 
     1. As a Customer, I want to log in to my account using my username and password.
         1. The system must validate the user and the password.
         2. If a Customer enters the wrong data, a warning will be shown.
