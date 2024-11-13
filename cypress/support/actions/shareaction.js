@@ -9,7 +9,7 @@ export class Shareactions {
         user: "maria111999@gmail.com",
         password: "Merlintesting1",
         surname : "Garcia",
-
+        city : "Paris",
     };
 
     start_web(){
@@ -33,7 +33,7 @@ export class Shareactions {
 
     rightSearch(){
         this.el.elements.searchArea.click();
-        this.el.elements.testDestination.type("Paris");
+        this.el.elements.testDestination.type(this.elemnts.city);
         this.el.elements.optionDestination.click(); 
         this.el.elements.startDate.click();
         this.el.elements.endDate.click();
@@ -42,7 +42,7 @@ export class Shareactions {
 
     wrongSearch(){
         this.el.elements.searchArea.click();
-        this.el.elements.testDestination.type("Paris");
+        this.el.elements.testDestination.type(this.elemnts.city);
         this.el.elements.startDate.click();
         this.el.elements.endDate.click();
         this.el.elements.searchButton.click() 

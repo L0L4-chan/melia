@@ -14,7 +14,6 @@ export class Commun{
         searchButton : () => cy.customFindElements("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.submit___3burc > button", 100) ,
     
         //view and booking
-
         hotel : () => cy.customFindElements( "#__next > div > div > main > div:nth-child(3) > div > div.c-section___1kLue > div > div > div > div > div > div:nth-child(1) > div > div.info-wrapper___34DSy > div > div > div.b-wrapper___3CcRc > div > div > div:nth-child(1) > div > div > span" ,100),
     
         //booking

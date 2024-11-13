@@ -6,7 +6,8 @@ The test will cover the booking process.
 ## Sections
 1. [Installation](#Installation)
 2. [Objective](#Objective)
-
+3. [Code](#Code)
+4. [How_to_use](#How_to_use)
 
 ## Installation 
 The proyect has been run on Ubuntu:
@@ -19,6 +20,7 @@ npm i -D @types/cucumber @types/chai
 npm install cypress-recaptcha --save-dev
 npx cypress open
 ```
+
 ## Objective
 - Motivation : User wants to book a hotel 
 - Acceptance Criteria : 
@@ -41,3 +43,26 @@ npx cypress open
         4. The system must validate the payment information.
         5. A confirmation text should be sent/ shown.
         6. In case any validation has not been successful, a warning message should be displayed.
+
+## Code
+The code is organized into two main folders:
+- The features folder contains the test features, which describe the steps that the test will follow using cucumber syntax.
+ Here data for the forms would be changed.
+- The support folder contains three sub folders:
+    1. actions:  this folder contains a file with the shared actions of the test
+    2. const: this folder contains the constants used on the test, these will be the files to change if the website changes.
+    3. steps: the actual tests.
+
+## How to use
+
+None of the tests are set to run, for doing so, on the .feature files they should be marked as focus.
+
+Once that is done we can execute the chosen test by entering:
+
+``` bash commands
+
+ npx cypress run 
+
+```
+
+The result will be shown on the console. 
