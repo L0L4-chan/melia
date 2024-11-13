@@ -3,7 +3,6 @@ export class Commun{
         accessUSer: () => cy.customFindElements("#icon___3dZhp",100)  ,
         login : () => cy.customFindElements("#access", 100),
         cookies : () => cy.customFindElements("#didomi-notice-disagree-button", 100),
-
         //search
 
         searchArea :  () => cy.customFindElements("#__next > div > div > div.search___2t_BT > div > div > div.tabs___28rrG > ul > li:nth-child(1) > a",100) ,

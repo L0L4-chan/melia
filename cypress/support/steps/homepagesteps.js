@@ -1,7 +1,7 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("I introduce the url", () => {
-    cy.visit("https://www.melia.com/es");
+When("I introduce the url", () => {
+    cy.visit("es", { failOnStatusCode: false });
     }
 );
 

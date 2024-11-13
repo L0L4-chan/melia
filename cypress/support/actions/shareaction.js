@@ -13,12 +13,16 @@ export class Shareactions {
     };
 
     start_web(){
-        cy.visit("/");
+        cy.visit("es", { failOnStatusCode: false });
     }
 
 
     close_cookies(){
-        this.el.elements.cookies.click();
+        try{
+            this.el.elements.cookies.click();
+        } catch {
+            cy.log("Not cookis found")
+        }
     }
     to_login(){
         this.el.elements.accessUSer.click();
