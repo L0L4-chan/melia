@@ -1,8 +1,14 @@
+import { Commun } from "../const/communconst";
+import { ConstLogin } from "../const/constLogin";
 export class Shareactions {
+
+    el= new Commun();
+    lo = new ConstLogin();
 
     elemnts = {
         user: "maria111999@gmail.com",
         password: "Merlintesting1",
+        surname : "Garcia",
 
     };
 
@@ -12,28 +18,65 @@ export class Shareactions {
 
 
     close_cookies(){
-        cy.get("#didomi-notice-disagree-button").click();
+        this.el.elements.cookies.click();
     }
     to_login(){
-        cy.get("#icon___3dZhp").click();
-        cy.get("#access").click();
+        this.el.elements.accessUSer.click();
+        this.el.elements.login.click();
     }
 
     log(){
-        cy.find("#user").type(this.elemnts.user);
-        cy.find("#password").type(this.elemnts.password);
-        cy.get("#submitBtn").click();
+        this.lo.elementsLogin.userName.type(this.elemnts.user);
+        this.lo.elementsLogin.password.type(this.elemnts.password);
+        this.lo.elementsLogin.submit.click();
     }
 
     rightSearch(){
-        cy.get("#__next > div > div > div.search___2t_BT").find("#__next > div > div > div.search___2t_BT > div > div > div.tabs___28rrG > ul > li:nth-child(1) > a").click();
-        cy.find("#suggest-input").type("Paris");
-        cy.get("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.destination___YiVIM > div > div.content___NTabH > div > div > div > div > div > div > div > div > div > div:nth-child(1) > button").click(); 
-        cy.get("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.calendar___3o0XN > div > div.wrapper___1qplQ > button > div")
-        .find("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.calendar___3o0XN > div > div.content___NTabH > div > div > div > div > div > div > div > div.react-calendar__viewContainer > div:nth-child(1) > div > div > div.react-calendar__month-view__days > button:nth-child(34) > abbr")
-        .click();
-        cy.find("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.calendar___3o0XN > div > div.content___NTabH > div > div > div > div > div > div > div > div.react-calendar__viewContainer > div:nth-child(2) > div > div > div.react-calendar__month-view__days > button:nth-child(36)").click();
-        cy.get("#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.submit___3burc > button").click()
+        this.el.elements.searchArea.click();
+        this.el.elements.testDestination.type("Paris");
+        this.el.elements.optionDestination.click(); 
+        this.el.elements.startDate.click();
+        this.el.elements.endDate.click();
+        this.el.elements.searchButton.click()
+    }
+
+    wrongSearch(){
+        this.el.elements.searchArea.click();
+        this.el.elements.testDestination.type("Paris");
+        this.el.elements.startDate.click();
+        this.el.elements.endDate.click();
+        this.el.elements.searchButton.click() 
+    }
+
+    pickupHotel(){
+        this.el.elements.hotel.click();
+    }
+
+    pickuproom(){
+
+        this.el.elements.room.click(); 
+    }
+
+    addextras(){
+        this.el.elements.addextras.click();
+        this.el.elements.acceptextras.click();
+    }
+
+    noextras(){
+        this.el.elements.refuseextras.click();
+    }
+
+    gotoforminfo(){
+        this.el.elements.accessform.click();
+    }
+
+    completecorreclty(){
+        this.el.elements.termsandconditions.click();
+        this.el.elements.fill2surname.type(act.elemnts.surname);
+    }
+
+    gotopayment(){
+        this.el.elements.proceedtopayment.click();
 
     }
 

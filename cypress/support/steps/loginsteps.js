@@ -1,9 +1,11 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import { Shareactions } from "../actions/shareaction";
+import { ConstLogin } from "../const/constLogin";
 
 const act = new Shareactions();
+const log = new ConstLogin();
 
-Given("I access the site correctly and I have a valid login", () => {
+Given("I access the site correctly", () => {
     act.start_web()
     cy.url().should("include","melia" );
     act.close_cookies();
@@ -12,26 +14,26 @@ Given("I access the site correctly and I have a valid login", () => {
 When("I introduce my login and password",()=>{
     act.log();
 });
+
+When("I introduce my wrong login and password",()=>{
+    log.elementsLogin.userName.type("name");
+    log.elementsLogin.userPassword.type("password");
+    log.elementsLogin.submit.click();
+});
+
+When("II introduce some data but not all",()=>{
+    log.elementsLogin.userName.type("name");
+    log.elementsLogin.submit.click();
+});
+
 Then("I access to the site as logged user", () =>{
     cy.url().should("include","dashboard");
-    cy.find("#button_content_2cPJr");
+    log.elementsLogin.iconLogUSer().should("be visible");
 });
 
-
-Given("I access the site correctly and I have an invalid login", () => {
-    act.start_web()
-    cy.url().should("include","melia" );
-    act.close_cookies();
-    }
-);
-When("I introduce my wrong login and password",()=>{
-    cy.find("#user").type("name");
-    cy.find("#password").type("password");
-    cy.get("#submitBtn").click();
-});
 Then("The system shows a warning message", () =>{
     cy.url().should("include","login");
-    cy.find("#error_3B9Tw");
+    log.elementsLogin.error.should("be visible");
 });
 
 
