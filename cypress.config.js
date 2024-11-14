@@ -7,7 +7,7 @@ module.exports = defineConfig({
   viewportHeight: 1440,
 
   e2e: {
-    baseUrl : "https://www.melia.com/",
+    baseUrl : "https://www.melia.com/es",
       "chromeWebSecurity": false,
     
     specPattern: "**/*.feature",
