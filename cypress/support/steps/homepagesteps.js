@@ -1,7 +1,7 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
 When("I introduce the url", () => {
-    cy.visit("es",   { headers: {
+    cy.visit("/",   { headers: {
         'User-Agent': 'PostmanRuntime/7.42.0' ,
         'Accept': '*/*',
         'Host': 'www.melia.com',
