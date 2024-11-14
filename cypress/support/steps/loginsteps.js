@@ -19,7 +19,7 @@ When("I introduce my login and password",()=>{
 
 When("I introduce my wrong login and password",()=>{
     act.to_login();
-    cy.wait(2000);
+    cy.wait(6000);
     log.elementsLogin.userName().type("name");
     log.elementsLogin.userPassword().type("password");
     log.elementsLogin.submit().click();
@@ -27,7 +27,7 @@ When("I introduce my wrong login and password",()=>{
 
 When("I introduce some {string} but not all",(data)=>{
     act.to_login();
-    cy.wait(2000);
+    cy.wait(10000);
     if(data == "name"){
         log.elementsLogin.userName().type("name");
         log.elementsLogin.submit().click();
@@ -45,20 +45,21 @@ Then("I access to the site as logged user", () =>{
 
 Then("The system shows a warning message", () =>{
     cy.url().should("include","login");
-    cy.wait(5000);
+    cy.wait(10000);
     log.elementsLogin.error().should("be.visible");
-    log.elementsLogin.error().should("contains","Los datos no coinciden");
+    log.elementsLogin.error().should("contain.text","Los datos no coinciden");
 }); 
 
 
 Then("The system shows a warning {string} message", (data) =>{
     cy.url().should("include","login");
+    cy.wait(10000);
     if(data == "name"){
         log.elementsLogin.missingpassword().should("be.visible");
-        log.elementsLogin.missingpassword().should("contains","Campo obligatorio");
+        log.elementsLogin.missingpassword().should("contain.test","Campo obligatorio");
     }else{
         log.elementsLogin.missingname().should("be.visible");
-        log.elementsLogin,missingname().should("contains","Campo obligatorio");
+        log.elementsLogin.missingname().should("contain.text","Campo obligatorio");
     }
 
 
