@@ -18,12 +18,16 @@ When("I introduce my login and password",()=>{
 });
 
 When("I introduce my wrong login and password",()=>{
+    act.to_login();
+    cy.wait(2000);
     log.elementsLogin.userName().type("name");
     log.elementsLogin.userPassword().type("password");
     log.elementsLogin.submit().click();
 });
 
 When("I introduce some {string} but not all",(data)=>{
+    act.to_login();
+    cy.wait(2000);
     if(data == "name"){
         log.elementsLogin.userName().type("name");
         log.elementsLogin.submit().click();
