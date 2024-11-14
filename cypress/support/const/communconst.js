@@ -5,7 +5,7 @@ export class Commun{
         cookies : () => cy.get('#didomi-notice-disagree-button'),
         //search
 
-        searchArea :  () => cy.get('#__next > div > div > div.search___2t_BT > div > div > div.tabs___28rrG > ul > li:nth-child(1) > a') ,
+        searchArea :  () => cy.get('.destination___YiVIM > .c-popup-opener___2WbuX > .wrapper___1qplQ > .button___1vWAZ'),
         testDestination :  () => cy.get('#suggest-input'),
         optionDestination : () => cy.get('#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.destination___YiVIM > div > div.content___NTabH > div > div > div > div > div > div > div > div > div > div:nth-child(1) > button') ,
         startDate : () => cy.get('#__next > div > div > div.search___2t_BT > div > div > div:nth-child(5) > form > div.b-wrapper___3CcRc > div > div.calendar___3o0XN > div > div.content___NTabH > div > div > div > div > div > div > div > div.react-calendar__viewContainer > div:nth-child(1) > div > div > div.react-calendar__month-view__days > button:nth-child(34) > abbr') ,

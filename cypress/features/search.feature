@@ -7,7 +7,7 @@ Feature: Hotel room under some preferences
     Scenario: Complete search
         When I introduce the correct information
         Then I should see a list of options
-
+@focus 
     Scenario: Search without a data
         When I introduce part information
         Then I should see a warning

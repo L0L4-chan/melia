@@ -32,20 +32,24 @@ export class Shareactions {
         }
     }
     to_login(){
+        cy.wait(2000);
         this.el.elements.accessUSer().click();
         cy.wait(2000);
-            this.el.elements.login().click();
+        this.el.elements.login().click();
     }
 
     log(){
+        cy.wait(10000);
         this.lo.elementsLogin.userName().type(this.elemnts.user);
         this.lo.elementsLogin.userPassword().type(this.elemnts.password);
         this.lo.elementsLogin.submit().click();
     }
 
     rightSearch(){
+        cy.wait(6000);
         this.el.elements.searchArea().click();
         this.el.elements.testDestination().type(this.elemnts.city);
+        cy.wait(6000);
         this.el.elements.optionDestination().click(); 
         this.el.elements.startDate().click();
         this.el.elements.endDate().click();
@@ -53,8 +57,10 @@ export class Shareactions {
     }
 
     wrongSearch(){
+        cy.wait(6000);
         this.el.elements.searchArea().click();
-        this.el.elements.testDestination().type(this.elemnts.city);
+        //this.el.elements.testDestination().type(this.elemnts.city);
+        cy.wait(6000);
         this.el.elements.startDate().click();
         this.el.elements.endDate().click();
         this.el.elements.searchButton().click() 
