@@ -35,12 +35,13 @@ When("I introduce some {string} but not all",(data)=>{
 
 Then("I access to the site as logged user", () =>{
     cy.url().should("include","dashboard");
-    log.elementsLogin.iconLogUSer().should("be visible");
+    cy.wait(5000);
+    log.elementsLogin.iconLogUSer().should("be.visible");
 });
 
 Then("The system shows a warning message", () =>{
     cy.url().should("include","login");
-    log.elementsLogin.error().should("be visible");
+    log.elementsLogin.error().should("be.visible");
     log.elementsLogin.error().should("contains","C Los datos no coinciden o son incorrectos. Por favor, inténtalo de nuevo.");
 }); 
 
@@ -48,10 +49,10 @@ Then("The system shows a warning message", () =>{
 Then("The system shows a warning {string} message", (data) =>{
     cy.url().should("include","login");
     if(data == "name"){
-        log.elementsLogin.missingpassword().should("be visible");
+        log.elementsLogin.missingpassword().should("be.visible");
         log.elementsLogin.missingpassword().should("contains","Campo obligatorio");
     }else{
-        log.elementsLogin.missingname().should("be visible");
+        log.elementsLogin.missingname().should("be.visible");
         log.elementsLogin,missingname().should("contains","Campo obligatorio");
     }
 
