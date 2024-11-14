@@ -6,7 +6,7 @@ const act = new Shareactions();
 const log = new ConstLogin();
 
 Given("I access the site correctly", () => {
-    act.start_web()
+    act.start_web();
     cy.url().should("include","melia" );
     act.close_cookies();
     }

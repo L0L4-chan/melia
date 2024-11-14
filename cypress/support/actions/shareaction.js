@@ -28,7 +28,7 @@ export class Shareactions {
         try{
             this.el.elements.cookies.click();
         } catch {
-            cy.log("Not cookies found")
+            cy.log("Not cookies found");
         }
     }
     to_login(){
