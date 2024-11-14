@@ -13,7 +13,14 @@ export class Shareactions {
     };
 
     start_web(){
-        cy.visit("es", { failOnStatusCode: false });
+        cy.visit("es",   { headers: {
+            'User-Agent': 'PostmanRuntime/7.42.0' ,
+            'Accept': '*/*',
+            'Host': 'www.melia.com',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive'
+            }
+        });
     }
 
 
@@ -21,7 +28,7 @@ export class Shareactions {
         try{
             this.el.elements.cookies.click();
         } catch {
-            cy.log("Not cookis found")
+            cy.log("Not cookies found")
         }
     }
     to_login(){

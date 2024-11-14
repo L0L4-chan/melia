@@ -28,3 +28,13 @@ Cypress.Commands.add('customFindElements', (element,time ) => {
     cy.wait(time); 
     return cy.get(element);
 })
+
+
+Cypress.Commands.add("clickRecaptcha", () => {
+    cy.window().then(win => {
+        win.document
+        .querySelector("iframe[src*='recaptcha']")
+        .contentDocument.getElementById("recaptcha-token")
+        .click();
+    });
+});
