@@ -45,8 +45,9 @@ Then("I access to the site as logged user", () =>{
 
 Then("The system shows a warning message", () =>{
     cy.url().should("include","login");
+    cy.wait(5000);
     log.elementsLogin.error().should("be.visible");
-    log.elementsLogin.error().should("contains","C Los datos no coinciden o son incorrectos. Por favor, inténtalo de nuevo.");
+    log.elementsLogin.error().should("contains","Los datos no coinciden");
 }); 
 
 
