@@ -56,7 +56,7 @@ Then("The system shows a warning {string} message", (data) =>{
     cy.wait(10000);
     if(data == "name"){
         log.elementsLogin.missingpassword().should("be.visible");
-        log.elementsLogin.missingpassword().should("contain.test","Campo obligatorio");
+        log.elementsLogin.missingpassword().should("contain.text","Campo obligatorio");
     }else{
         log.elementsLogin.missingname().should("be.visible");
         log.elementsLogin.missingname().should("contain.text","Campo obligatorio");
