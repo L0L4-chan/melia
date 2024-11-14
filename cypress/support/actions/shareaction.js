@@ -6,7 +6,7 @@ export class Shareactions {
     lo = new ConstLogin();
 
     elemnts = {
-        user: "maria111999@gmail.com",
+        user: "maria111999garcia@gmail.com",
         password: "Merlintesting1",
         surname : "Garcia",
         city : "Paris",
