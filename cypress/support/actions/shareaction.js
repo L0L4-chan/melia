@@ -33,7 +33,8 @@ export class Shareactions {
     }
     to_login(){
         this.el.elements.accessUSer().click();
-        wait(this.el.elements.login()).click();
+        cy.wait(2000);
+            this.el.elements.login().click();
     }
 
     log(){
