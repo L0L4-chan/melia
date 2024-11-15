@@ -75,19 +75,14 @@ export class Shareactions {
     selectHotel(){
         this.el.elements.getHotel().click();
     }
-
+//revisar desde aui, los elementos escogidos 
     pickuproom(){
-
         this.el.elements.room().click(); 
     }
 
     addextras(){
         this.el.elements.addextras().click();
         this.el.elements.acceptextras().click();
-    }
-
-    noextras(){
-        this.el.elements.refuseextras().click();
     }
 
     gotoforminfo(){
@@ -99,6 +94,21 @@ export class Shareactions {
         this.fillupSurname()
     }
 
+
+    gotopayment(){
+        this.el.elements.proceedtopayment().click();
+
+    }
+
+
+    noextras(){
+        this.el.elements.refuseextras().click();
+    }
+
+    advance(){
+        this.el.elements.advance();
+    }
+
     clickonTerms(){
         this.el.elements.termsandconditions().click();
     }
@@ -107,9 +117,5 @@ export class Shareactions {
         this.el.elements.fill2surname().type(this.elemnts.surname);
     }
 
-    gotopayment(){
-        this.el.elements.proceedtopayment().click();
-
-    }
 
 }

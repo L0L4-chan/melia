@@ -15,22 +15,26 @@ export class Commun{
     
         //view and booking
         hotel : () => cy.get( '#__next > div > div > main > div:nth-child(3) > div > div.c-section___1kLue > div > div > div > div > div > div:nth-child(1) > div > div.info-wrapper___34DSy > div > div > div.b-wrapper___3CcRc > div > div > div:nth-child(1) > div > div > span',{ timeout: 10000 }),
-        getHotel : () =>  cy.get("#__next > div > div > main > div:nth-child(3) > div > div.c-section___1kLue > div > div > div > div > div > div:nth-child(1) > div > div.info-wrapper___34DSy > div > div > div.actions-wrapper___3x3wS > div > div > div > div:nth-child(2) > button") ,
-        
+        getHotel : () =>  cy.get("#__next > div > div > main > div:nth-child(3) > div > div.c-section___1kLue > div > div > div > div > div > div:nth-child(2) > div > div.info-wrapper___34DSy > div > div > div.actions-wrapper___3x3wS > div > div > div > div:nth-child(2) > button", { timeout: 10000 }) ,
+                                
         //booking
         room : () => cy.get('#__next > div > div > main > div:nth-child(4) > div.c-section___1kLue > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div:nth-child(1) > div > div.info-wrapper___34DSy > div > div > div.actions-wrapper___3x3wS > div > div > div > div > div:nth-child(2) > button',{ timeout: 10000 }),
-        addextras : () => cy.get( '#extra-services > div > div > div > div > div > div > div.cell.expandables-wrapper___2P3nj > div > div.body___AjL7f > div > div:nth-child(2) > div > div > div.plus___2yynh > svg > g > g',{ timeout: 10000 }), 
+        addextras : () => cy.get( '#extra-services > div > div > div > div > div > div > div.cell.expandables-wrapper___2P3nj > div > div.body___AjL7f > div > div:nth-child(2) > div > div > div.plus___2yynh > svg',{ timeout: 10000 }), 
         acceptextras : () => cy.get('#__next > div > div > main > div.c-modal___2lrxj > div.container___1q-Ao > div > div > div > div > div.actions___zTbmZ > div > div > div.c-block___29w0l > div > button:nth-child(2)',{ timeout: 10000 }),
-        refuseextras : () => cy.get('#__next > div > div > main > div.c-modal___2lrxj > div.container___1q-Ao > div > div > div > div > div.actions___zTbmZ > div > div > div.c-block___29w0l > div > button:nth-child(1)',{ timeout: 10000 }),
-    
-        // booking info
-
         accessform : () => cy.get( '#__next > div > div > main > div.b-wrapper___3CcRc > div > div.content-body___jxs7r > div:nth-child(3) > div > button:nth-child(2)',{ timeout: 10000 }),
         fill2surname : () => cy.get( '#surname2',{ timeout: 10000 }),
         termsandconditions :  () => cy.get('#__next > div > div > main > div.b-wrapper___3CcRc > div > div.content-body___jxs7r > div:nth-child(3) > div > form > div.b-grid___1vXmM > div > div:nth-child(15) > div > label',{ timeout: 10000 } ),
-
-        // booking to payment
-
         proceedtopayment : () => cy.get('#__next > div > div > main > div.b-wrapper___3CcRc > div > div.content-body___jxs7r > div:nth-child(3) > div > form > div.submit___1GWPg > button:nth-child(2)' ,{ timeout: 10000 }),
+        
+
+        tarifa: ()=> cy.get('[data-size="4"] > .c-button___2XZmD', { timeout: 10000 }),
+
+
+        refuseextras : () => cy.get('#__next > div > div > main > div.c-modal___2lrxj > div.container___1q-Ao > div > div > div > div > div.actions___zTbmZ > div > div > div.c-block___29w0l > div > button:nth-child(1)',{ timeout: 10000 }),
+        advance:() =>   cy.get("#__next > div > div > main > div.b-wrapper___3CcRc > div > div.content-aside___3QqwC > div > div:nth-child(4) > div.c-block___29w0l > div > div:nth-child(1) > h5",{ timeout: 10000 }),
+        // booking info
+
+        
+    
     }
 }
