@@ -1,8 +1,9 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 import { Shareactions } from "../actions/shareaction";
+import { Constbooking } from "../const/constbooking";
 
 const act = new Shareactions();
-
+const cons = new Constbooking();
 
 Given("I select a room from the list", ()=> {
     act.selectHotel();
@@ -18,7 +19,7 @@ When("fill up the form with extras", ()=>{
 });
 
 Then("The payment form is display", () =>{
-    cons.payment().should("be.visible");
+    cons.elements.payment().should("be.visible");
 })
 
 
