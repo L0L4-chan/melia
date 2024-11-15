@@ -1,14 +1,10 @@
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import { Shareactions } from "../actions/shareaction";
+
+const act = new Shareactions()
 
 When("I introduce the url", () => {
-    cy.visit("/",   { headers: {
-        'User-Agent': 'PostmanRuntime/7.42.0' ,
-        'Accept': '*/*',
-        'Host': 'www.melia.com',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Connection': 'keep-alive'
-        }
-    });
+    act.start_web();
 });
 
 Then("I access the home page", () =>{
