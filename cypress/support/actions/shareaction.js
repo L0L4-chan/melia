@@ -69,24 +69,24 @@ export class Shareactions {
     }
 
     pickupHotel(){
-        this.el.elements.hotel().click();
+        this.el.elements.hotel().should('be.visible').click();
     }
 
     selectHotel(){
-        this.el.elements.getHotel().click();
+        this.el.elements.getHotel().should('be.visible').click();
     }
 //revisar desde aui, los elementos escogidos 
     pickuproom(){
-        this.el.elements.room().click(); 
+        this.el.elements.room().should('be.visible').click(); 
     }
 
     addextras(){
-        this.el.elements.addextras().click();
-        this.el.elements.acceptextras().click();
+        this.el.elements.addextras().should('be.visible').click();
+        this.el.elements.acceptextras().should('be.visible').click();
     }
 
     gotoforminfo(){
-        this.el.elements.accessform().click();
+        this.el.elements.accessform().should('be.visible').click();
     }
 
     completecorreclty(){
@@ -96,13 +96,13 @@ export class Shareactions {
 
 
     gotopayment(){
-        this.el.elements.proceedtopayment().click();
+        this.el.elements.proceedtopayment().should('be.visible').click();
 
     }
 
 
     noextras(){
-        this.el.elements.refuseextras().click();
+        this.el.elements.refuseextras().should('be.visible').click();
     }
 
     advance(){
@@ -110,11 +110,11 @@ export class Shareactions {
     }
 
     clickonTerms(){
-        this.el.elements.termsandconditions().click();
+        this.el.elements.termsandconditions().should('be.visible').click();
     }
 
     fillupSurname(){
-        this.el.elements.fill2surname().type(this.elemnts.surname);
+        this.el.elements.fill2surname().should('be.visible').type(this.elemnts.surname);
     }
 
 

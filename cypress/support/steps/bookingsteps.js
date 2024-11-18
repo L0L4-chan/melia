@@ -57,7 +57,7 @@ Then("The payment form is display", () =>{
 })
 
 Then("The warning for missing information form is display", ()=>{
-    cons.elements.errormissing().should("contain.text", "es");
+    cons.elements.errormissing().should("contain.text", "Campo");
 });
 
 
@@ -70,3 +70,7 @@ Then("The warning for data, {string} is display", (text) =>{
 })
 
 
+afterEach(() => {
+    cy.clearCookies();
+    cy.clearLocalStorage();
+});
