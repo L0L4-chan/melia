@@ -4,7 +4,7 @@ Feature: Book a room
         Given User is logged in 
         Given I introduce the correct information
         Given I select a room from the list
-
+@focus 
     Scenario: try to book a room with extras
         When fill up the form with extras
         Then The payment form is display 
@@ -20,7 +20,7 @@ Feature: Book a room
     Scenario: try to book a room without name data
         When fill up the without data
         Then The warning for data, "requerido" is display  
-@focus 
+
     Scenario: try to book a room without extras
         When fill up the form without extras
         Then The payment form is display 

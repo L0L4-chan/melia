@@ -19,4 +19,6 @@ module.exports = defineConfig({
     TAGS: '@focus'
   }
   },
+  video: true,
+  videosFolder: "results/videos"
 });
