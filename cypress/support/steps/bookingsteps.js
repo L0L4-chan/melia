@@ -57,16 +57,16 @@ Then("The payment form is display", () =>{
 })
 
 Then("The warning for missing information form is display", ()=>{
-    cons.errormissing().should("contain.text", "es");
+    cons.elements.errormissing().should("contain.text", "es");
 });
 
 
 Then("The warning for term, {string} is display", (text) =>{
-    cons.errorterm().should('contain.text', text); 
+    cons.elements.errorterm().should('contain.text', text); 
 })
 
 Then("The warning for data, {string} is display", (text) =>{
-    cons.errordata().should('contain.text', text); 
+    cons.elements.errordata().should('contain.text', text); 
 })
 
 

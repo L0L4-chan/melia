@@ -8,6 +8,7 @@ The test will cover the booking process.
 2. [Objective](#Objective)
 3. [Code](#Code)
 4. [How_to_use](#How_to_use)
+5. [Important_information](#Important_information)
 
 ## Installation 
 The proyect has been run on Ubuntu:
@@ -66,3 +67,6 @@ Once that is done we can execute the chosen test by entering:
 ```
 
 The result will be shown on the console. 
+
+## Important information:
+For the booking tests, as the web site block the room, sometime is needed to wait around 10 minutes to performance a second scenario.
