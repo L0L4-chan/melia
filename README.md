@@ -69,4 +69,9 @@ Once that is done we can execute the chosen test by entering:
 The result will be shown on the console. 
 
 ## Important information:
-For the booking tests, as the web site block the room, sometime is needed to wait around 10 minutes to performance a second scenario.
+For the booking tests, sometime is needed to wait around 10 minutes to performance a second scenario.
+![Screenshot](./image/booking  without data pass.png)
+![Screenshot](./image/booking with all data.png)
+![Screenshot](./image/booking without extras.png)
+![Screenshot](./image/booking without name.png)
+![CScreenshot](./image/tests except booking.png)
