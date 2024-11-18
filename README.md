@@ -70,8 +70,9 @@ The result will be shown on the console.
 
 ## Important information:
 For the booking tests, sometime is needed to wait around 10 minutes to performance a second scenario.
-![Screenshot](./image/booking  without data pass.png)
-![Screenshot](./image/booking with all data.png)
-![Screenshot](./image/booking without extras.png)
-![Screenshot](./image/booking without name.png)
-![CScreenshot](./image/tests except booking.png)
+![Screenshot](./image/withoutdata.png)
+![Screenshot](./image/withalldata.png)
+![Screenshot](./image/withoutextras.png)
+![Screenshot](./image/withoutname.png)
+![Screenshot](./image/withoutterms.png)
+![CScreenshot](./image/tests.png)
