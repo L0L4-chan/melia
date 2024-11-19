@@ -2,7 +2,7 @@ export class Commun{
     elements = {
         accessUSer: () => cy.get('.text___3uBUg', { timeout: 15000 }),
         login : () => cy.get('#access',{ timeout: 15000 }),
-        cookies : () => cy.get('#didomi-notice-disagree-button',{ timeout: 15000 }),
+        cookies : () => cy.get('#didomi-notice-disagree-button',{ timeout: 20000 }),
         //search
 
         searchArea :  () => cy.get('.destination___YiVIM > .c-popup-opener___2WbuX > .wrapper___1qplQ > .button___1vWAZ',{ timeout: 15000 }),

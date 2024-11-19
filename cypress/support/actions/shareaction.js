@@ -73,7 +73,8 @@ export class Shareactions {
     }
 
     selectHotel(){
-        this.el.elements.getHotel().should('be.visible').click();
+        cy.wait(2000);
+        this.el.elements.getHotel().should('be.visible').should('not.be.disabled').click();
     }
 //revisar desde aui, los elementos escogidos 
     pickuproom(){

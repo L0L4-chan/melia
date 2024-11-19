@@ -68,3 +68,12 @@ Then("The warning for term, {string} is display", (text) =>{
 Then("The warning for data, {string} is display", (text) =>{
     cons.elements.errordata().should('contain.text', text); 
 })
+
+
+afterEach(() => {
+    cy.clearCookies();
+    cy.clearLocalStorage();
+    cy.window().then((win) => {
+      win.sessionStorage.clear(); // Limpia el almacenamiento de sesión
+    });
+});

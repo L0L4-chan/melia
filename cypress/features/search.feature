@@ -1,7 +1,7 @@
 
 Feature: Hotel room under some preferences
 
-    Background: The user should be loog in
+    Background: The user should be log in
         Given User is logged in
 
     Scenario: Complete search
@@ -14,5 +14,5 @@ Feature: Hotel room under some preferences
 
 
     Scenario: Search with a wrong data
-        When I introduce a wrong city "gngn"
-        Then I should see a pop warning
+        When I introduce a wrong city "gngn "
+        Then I should see a pop warning "Lo sentimos, nuestro sistema no reconoce este nombre"
