@@ -29,3 +29,5 @@ jobs:
 
       - name: execute dockerfile
         run: docker build -t cypress-tests .
+      - name: execute test
+        run: docker run -rm -v ~(pwd):/app cypress-test 
