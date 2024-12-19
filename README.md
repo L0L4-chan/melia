@@ -12,6 +12,8 @@ The test will cover the booking process.
 
 ## Installation 
 The proyect has been run on Ubuntu:
+
+
 ``` bash commands 
 npm init -y
 npm install cypress --save-dev
@@ -21,6 +23,9 @@ npm i -D @types/cucumber @types/chai
 npm install cypress-recaptcha --save-dev
 npx cypress open
 ```
+The project is now create on your computer you just need to add the replace the package.json and the cypress.config file.
+
+You will find the cucumber features on the features folder and the test elements are on the folders contain on support folder.
 
 ## Objective
 - Motivation : User wants to book a hotel 
