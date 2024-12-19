@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Create docker image
+        run: docker build -t cypress-tests .
 
       - name: Run Cypress tests
         run: docker run --rm -v $(pwd)/cypress/results:/app/cypress/results cypress-tests
